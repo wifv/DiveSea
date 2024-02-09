@@ -274,6 +274,7 @@
     .unit {
         flex-direction: column;
         align-items: flex-start;
+        font-size: 18px;
     }
 
     #footer-links {
@@ -310,6 +311,24 @@
         top: 120px;
     }
 
+    .top-collection-names * {
+        font-size: 18px !important;
+    }
+    
+    .big-text {
+        font-size: 50px;
+    }
+
+    header {
+        padding-top: 20px !important;
+    }
+    
+    h1,
+    .h1,
+    .join-community-text-bottom,
+    .join-community-text-top {
+        font-size: 35px !important;
+    }
 }
 
 @media (max-width: 584px) {
