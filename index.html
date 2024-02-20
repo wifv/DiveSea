@@ -16,10 +16,14 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
     <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -81,7 +85,7 @@
     <section class="page-1 pad">
         <div class="page-1-wrapper">
             <p class="page-1-top">Weekly - Top NFT</p>
-            <div class="mySwiper">
+            <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="block-time">07h 09m 12s</div>
@@ -155,7 +159,7 @@
                             <div class="left-btn">PLACE BID</div>
                         </div>
                     </div>
-                    <div class="swiper-slide ">
+                    <div class="swiper-slide">
                         <div class="block-time">07h 09m 12s</div>
                         <img src="./images/image3.png" alt="image">
                         <div class="l">
@@ -678,27 +682,28 @@
         </div>
     </footer>
 
-    <script>
-        let swiper = new Swiper(".mySwiper", {
-            loop: true,
-            slidesPerView: "auto",
-            navigation: {
-              nextEl: ".right",
-              prevEl: ".left",
-            },
-            spaceBetween: 40,
-            breakpoints: {
-                200: {
-                    slidesPerView: 1,
-                    loop: false,
-                    width: 280
-                },
-                465: {
-                    slidesPerView: 'auto',
-                } 
-            }
-        });
-    </script>
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      const swiper = new Swiper('.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween:0,
+        slidesPerView:1,
+        breakpoints: {
+          560: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          840: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30
+          },
+        }
+    });
+    </script>    
 
     <script src="./js/script.js"></script>
     <script src="./js/media.js"></script>
